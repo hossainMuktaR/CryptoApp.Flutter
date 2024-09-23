@@ -1,3 +1,4 @@
+import 'package:cryptoapp_flutter/presentation/coin_list/coin_list_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'CryptoApp',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -17,9 +19,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("CryptoApp"),
+          title: const Text("CryptoApp"),
         ),
-        body: Center(child: Text("Hello World")),
+        body: const CoinListScreen(),
       ),
     );
   }
